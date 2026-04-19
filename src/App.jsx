@@ -34,7 +34,7 @@ const ArrowRightIcon = () => (
 );
 
 export default function Portfolio() {
-  const roles = ["Data Analyst", "ML Enthusiast", "SQL Developer", "Python Developer"];
+  const roles = ["Data Analyst", "AI Engineer", "Data Scientist", "Python Developer"];
   const [text, setText] = React.useState("");
   const [index, setIndex] = React.useState(0);
   const [subIndex, setSubIndex] = React.useState(0);
@@ -206,7 +206,7 @@ export default function Portfolio() {
               className="relative flex justify-center lg:justify-end"
             >
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                 <div className="relative">
                   <img
                     src="/profile.png"
@@ -214,42 +214,10 @@ export default function Portfolio() {
                     onError={(e) => {
                       e.target.src = "https://via.placeholder.com/400";
                     }}
-                    className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover shadow-2xl border-2 border-white/10"
+                    className="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl border-2 border-white/10"
                   />
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-
-                {/* Floating elements */}
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-2xl">🚀</span>
-                </motion.div>
-
-                <motion.div
-                  animate={{
-                    y: [0, 10, 0],
-                    rotate: [0, -5, 0]
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-2xl">💡</span>
-                </motion.div>
               </div>
             </motion.div>
           </div>
