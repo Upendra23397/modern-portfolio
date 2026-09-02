@@ -26,6 +26,12 @@ const MailIcon = () => (
   </svg>
 );
 
+const CodeIcon = () => (
+  <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+    <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const reveal = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
 const projects = [
@@ -45,6 +51,8 @@ export default function Portfolio() {
   const links = [
     { label: "GitHub", href: "https://github.com/Upendra23397", icon: GithubIcon },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/upendra-chauhan-9488232a5/", icon: LinkedinIcon },
+    { label: "LeetCode", href: "https://leetcode.com/u/upendrachauhan/", icon: CodeIcon },
+    { label: "GFG", href: "https://www.geeksforgeeks.org/profile/letmecook?tab=activity", icon: CodeIcon },
     { label: "Email", href: "mailto:up26445208@gmail.com", icon: MailIcon }
   ];
 
